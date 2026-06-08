@@ -48,8 +48,7 @@ ENTRYPOINT ["node", "app.js"]
 바인드 마운트와 함께 실행
 
 > docker run -v /호스트/경로:/컨테이너/경로 {이미지명}
-
-# 예시
+> - 예시)
 > docker run -v /home/user/data:/app/data -p 8080:7000 atlassian-api
 
 📋 컨테이너 프로세스 관리
@@ -77,8 +76,7 @@ ENTRYPOINT ["node", "app.js"]
 📁 파일 이동
 > 호스트 → 컨테이너 (역방향도 가능)
 > - sudo docker cp {파일명} {컨테이너ID}:{컨테이너경로}
-
-# 예시
+> - 예시)
 > sudo docker cp openlogic-openjdk-21.0.11+10-linux-x64.tar.gz 689485fb92fb:/root
 
 🌐 네트워크
@@ -101,8 +99,7 @@ sudo docker inspect app-volume
 
 ⚠️ 주의: 커밋은 부모 이미지에 대해 레이어 의존성을 생성하므로, Dockerfile 빌드 방식을 권장
 > docker commit {컨테이너ID} {새이미지명:태그}
-
-# 예시
+> - 예시)
 > docker commit 689485fb92fb atlassian-api:saved
 
 🗜️ 자식 이미지 평탄화 (Flatten)
